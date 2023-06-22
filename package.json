@@ -1,7 +1,7 @@
 {
   "name": "maketest",
   "version": "0.1.0",
-  "homepage": "https://ivanjonse.github.io/LandingPage/",
+  "homepage": "https://ivanjonse.github.io/MakeTestApp/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
