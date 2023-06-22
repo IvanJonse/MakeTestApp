@@ -1,0 +1,38 @@
+.sideMenu
+  &__list
+    position: fixed
+    top: 216px
+    left: 64px
+    list-style: none
+    grid-column: 1 / span 3
+    &__item
+      cursor: pointer
+      font-family: "Graphik-Medium"
+      font-weight: 400
+      list-style: none
+      font-size: 14px
+      margin-bottom: 16px
+      &:last-child
+        margin-bottom: 0
+
+            
+.sideMenu__list__item__btn 
+  white-space: nowrap
+  color: #7D7D7D
+  transition: .1s color ease
+  text-decoration: none
+  border: none
+  cursor: pointer
+  padding: 0
+  &:hover
+    color: #1B1B1B
+
+.sideMenu__list__item__btn.active 
+  color: #3E29E3
+  &:hover
+    color: #3E29E3
+
+
+@media screen and (max-width: 992px)
+  .sideMenu__list
+    display: none

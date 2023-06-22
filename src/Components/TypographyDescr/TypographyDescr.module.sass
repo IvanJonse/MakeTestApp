@@ -1,0 +1,63 @@
+.typography
+    &__descr
+        display: flex
+        gap: 10px
+        grid-column: 1 / span 8
+        &__item
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            gap: 48px
+            -webkit-hyphens: auto
+            hyphens: auto
+            white-space: wrap
+            word-break: normal
+            &:not(:last-child)
+                color: #7D7D7D   
+                margin-right: 42px
+            &:last-child
+                color: #1B1B1B  
+            &__title
+                font-size: 14px
+                max-width: 238px
+            &__h1
+                font-family: 'Graphik-Black', sans-serif
+                font-size: 48px
+            &__h2
+                font-family: 'Graphik-Black', sans-serif
+                font-size: 32px
+            &__h3
+                font-family: "Graphik-Medium", sans-serif
+                font-size: 24px
+            &__h4
+                font-family: "Graphik-Medium", sans-serif
+                font-size: 18px
+            &__p1
+                font-family: "Graphik-Regular", sans-serif
+                font-size: 24px
+            &__p2
+                font-family: "Graphik-Regular", sans-serif
+                font-size: 18px
+            &__p3
+                font-family: "Graphik-Regular"
+                font-size: 16px
+            &__p4
+                font-size: 14px
+
+
+@media screen and (max-width: 900px)
+    .typography__descr__item
+       
+        &:not(:last-child)
+            margin-right: 12px
+
+@media screen and (max-width: 500px)
+    .typography__descr__item__h1
+        font-size: 35px !important
+
+@media screen and (max-width: 420px)
+    .typography__descr__item
+        word-break: break-all
+
+        
+

@@ -1,0 +1,358 @@
+@import 'fonts.sass'
+
+ul, li, h1, h2, h3, h4, p 
+  padding: 0
+  margin: 0
+
+.App
+  height: 90vh
+  overflow-y: scroll
+  background-color:#F2F2F2
+  font-family: 'GraphikLCG', sans-serif 
+  display: grid
+  grid-template-columns: repeat(12, 72px)
+  grid-column-gap: 32px
+  padding-left: 64px
+
+.wrapper
+  display: grid
+  z-index: 4
+  color: #1B1B1B
+  text-align: left
+  margin-top: 45px
+  grid-column: 4 / span 9
+  padding-right: 64px
+  &__title
+    font-family: 'Graphik-Black', sans-serif
+    font-size: 48px
+    font-weight: 800
+    white-space: nowrap
+  &__subtitle
+    margin-top: 16px
+    font-family: 'Graphik-Regular', sans-serif
+    font-size: 24px
+    font-weight: 500
+    line-height: 24px
+    white-space: nowrap
+  &__descr
+    line-height: 24px
+    font-family: 'Graphik-Regular', sans-serif
+    font-size: 16px
+    grid-column: 1 / span 6
+
+.harangue
+  grid-template-columns: repeat(9, 1fr) 
+  display: grid
+
+.harangue .wrapper__title   
+  margin-top: 64px
+  grid-column: 1 / span 5
+
+.harangue .wrapper__subtitle   
+  margin-top: 64px
+  grid-column: 1 / span 2
+
+.harangue .wrapper__descr   
+  margin-top: 64px
+  grid-column: 1 / span 6
+
+.grid
+  margin-top: 80px
+  display: grid
+  
+.grid .wrapper__title
+  grid-column: 1 / span 2
+  font-size: 32px
+
+.grid .wrapper__descr
+  margin-top: 24px
+
+.layout
+  margin-top: 48px
+  display: grid
+  grid-column: 1 / span 9
+  &__title
+    margin-top: 36px
+    max-width: 190px
+    margin-bottom: 32px
+    font-family: 'Graphik-Regular', sans-serif
+    font-size: 24px
+    color: #1b1b1b
+    font-weight: 600
+    line-height: 32px
+  &__descr
+    display: flex
+    justify-content: start
+    align-items: center
+    &__item
+      font-size: 14px
+      color:#7D7D7D
+      text-align: left
+      font-family: 'Graphik-Regular', sans-serif
+      font-weight: 400
+      margin-right: 95px
+      white-space: nowrap
+      &:nth-child(2)
+        margin-right: 152px
+      &:last-child
+        margin-right: 0
+      &__count
+        text-align: left
+        margin-top: 8px
+        white-space: nowrap
+        font-family: 'Graphik-Regular', sans-serif
+        font-size: 24px
+        font-weight: 500
+        line-height: 32px
+        color: #1B1B1B
+  &__image
+    margin-top: 48px
+    margin-bottom: 22px
+    width: 100%
+    height: auto
+    display: block   
+    &__item
+      height: auto
+      display: block 
+  
+.typography
+  grid-template-columns: repeat(9, 1fr) 
+  display: grid
+
+.typography .wrapper__title
+  grid-column: 1/span 3
+  font-size: 32px
+  margin-top: 80px
+
+.typography .wrapper__descr
+  margin-top: 24px
+
+.ui .wrapper__title
+  grid-column: 1/span 2
+  font-size: 32px
+  text-transform: uppercase
+
+
+.ui .wrapper__descr
+  margin-top: 24px
+  margin-bottom: 48px
+
+.ui
+  grid-template-columns: repeat(9, 1fr) 
+  display: grid
+  margin-top: 80px
+  &__title
+    font-family: 'Graphik-Regular', sans-serif
+    font-size: 24px
+    color: #1b1b1b
+    font-weight: 600
+    line-height: 32px
+    margin-top: 64px
+    margin-bottom: 32px
+    grid-column: 1 / span 3
+  &__buttonWrap
+    display: grid 
+    flex-direction: row
+    margin-bottom: 64px
+    grid-column: 1 / span 7
+    &__wrap
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      grid-column: 1 / 2
+      &:last-child
+        grid-column: 4 / 3
+
+.ui__title
+  &__field
+    grid-column: 1/span 2
+    margin-top: 24px
+    margin-bottom: 92px
+  &__list
+    margin-top: 90px
+    margin-bottom: 24px
+  &__btn
+    grid-column: 1/span 1
+    margin-top: 232px
+    margin-bottom: 76px
+
+@media screen and (max-width: 1440px)
+
+  .App
+    grid-template-columns: repeat(12, 72px)
+
+@media screen and (max-width: 1300px)
+  .App
+    grid-column-gap: 25px
+    padding-left: 40px
+
+  .layout__image__item
+    max-width: 700px
+
+  .harangue .wrapper__title   
+    grid-column: 1 / span 6
+
+  .harangue .wrapper__subtitle   
+    grid-column: 1 / span 3
+
+@media screen and (max-width: 1200px)
+
+  .App
+    grid-template-columns: repeat(12, 60px)
+
+@media screen and (max-width: 1080px)
+
+ .App
+  padding-left: 0
+ .layout__descr__item
+    margin-right: 45px
+    &:nth-child(2)
+      margin-right: 102px
+
+@media screen and (max-width: 1016px)
+  .App
+    grid-column-gap: 22px  
+
+
+@media screen and (max-width: 992px)
+  .App
+    padding: 0
+    grid-template-columns: none
+
+  .wrapper 
+    padding: 0 64px
+    grid-template-columns: repeat(12, 1fr) 
+    grid-column: 1 / span 12
+
+  .harangue
+    grid-template-columns: none
+    grid-column: 4/span 8
+    &__title
+      font-size: 38px
+    &__descr
+      max-width: 400px
+
+  .harangue .wrapper__title
+    grid-column: 1 / span 8
+
+  .harangue .wrapper__descr
+    text-align: left
+
+  .grid
+    grid-column: 4/span 7
+
+  .grid .wrapper__descr
+    text-align: left
+
+  .layout
+    &__title
+      text-align: center
+    &__image
+      margin: auto
+      margin-top: 14px
+      max-width: 350px
+      &__item
+        max-width: 350px
+    &__descr 
+      display: flex
+      flex-direction: column
+      align-items: start
+      gap: 30px
+      margin: auto
+      &__item
+        margin-right: 0
+        &:nth-child(2)
+          margin-right: 0
+          
+
+  .typography
+    grid-template-columns: none 
+    grid-column: 4/span 8
+
+  .ui
+    display: flex
+    flex-direction: column
+    align-items: center
+    grid-column: 4/span 8
+    &__buttonWrap
+      display: flex
+      flex-direction: column 
+      margin-bottom: 44px
+      &__wrap
+        &:not(:last-child)
+          margin-bottom: 24px
+        
+    &__btn
+      margin-left: 0
+    &__form 
+      flex-direction: column
+
+  
+@media screen and (max-width: 768px)
+
+  .harangue
+    grid-column: 3/span 9
+
+  .grid
+    grid-column: 3/span 9
+
+  .typography
+    grid-column: 3/span 9
+
+  .ui
+    grid-column: 3/span 9
+
+
+  .harangue .wrapper__title
+    font-size: 35px
+
+  .wrapper 
+    padding: 0 64px
+    grid-column: 1 / span 8
+
+
+@media screen and (max-width: 600px)
+  .harangue .wrapper__title
+    white-space: normal
+  .wrapper
+    padding: 0 24px
+    &__title
+    font-size: 28px
+
+  .harangue 
+    &__descr
+      display: block
+      box-sizing: border-box
+
+      max-width: 300px
+  .layout
+    &__image
+      margin: auto
+      max-width: 300px
+      &__item
+        max-width: 300px
+
+  .harangue
+    grid-column: 1/span 12
+
+  .grid
+    grid-column: 1/span 12
+
+  .typography
+    grid-column: 1/span 12
+
+  .ui
+    grid-column: 1/span 12
+
+
+@media screen and (max-width: 370px)
+
+  .wrapper
+    padding: 0 16px
+
+@media screen and (max-width: 340px)
+  .layout__image
+    max-width: 280px
+    &__item
+      max-width: 280px
+
